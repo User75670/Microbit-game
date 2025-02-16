@@ -9,7 +9,6 @@ function playAgain () {
     pointX = Math.randomRange(0, 4)
     pointY = Math.randomRange(0, 4)
 }
-
 input.onButtonPressed(Button.A, function () {
     // Move the player to the left
     if (isGameRunning && playerX > 0) {
@@ -38,7 +37,6 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         music.play(music.tonePlayable(330, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
     }
 })
-
 let points = 0
 let hasGameStarted = false
 let playerX = 0
@@ -50,7 +48,6 @@ playerY = 2
 pointX = 4
 pointY = 2
 isGameRunning = true
-
 // Other stuff to run the game (Please don't touch them or the game can break)
 basic.forever(function () {
     if (isGameRunning) {
@@ -73,7 +70,6 @@ basic.forever(function () {
             if (points == 10 || points == 20) {
                 basic.clearScreen()
                 basic.showNumber(points)
-                playAgain()
                 playerX = Math.randomRange(0, 4)
                 playerY = Math.randomRange(0, 4)
                 checkIfTooClose()
