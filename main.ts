@@ -69,7 +69,9 @@ basic.forever(function () {
         } else {
             if (points == 10 || points == 20) {
                 basic.clearScreen()
+                isGameRunning = false
                 basic.showNumber(points)
+                isGameRunning = true
                 playerX = Math.randomRange(0, 4)
                 playerY = Math.randomRange(0, 4)
                 checkIfTooClose()
